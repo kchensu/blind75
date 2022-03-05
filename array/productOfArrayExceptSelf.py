@@ -1,17 +1,21 @@
+import numpy as np
+
+
 def productOfArrayExceptSelf(a):
-    res = [0]*len(a)
+    left = [0]*len(a)
+    right = [0]*len(a)
     pre = 1
     pos = 1
 
     for i in range(len(a)):
-        res[i] = pre
+        left[i] = pre
         pre = pre*a[i]
-    print(res)
 
     for j in reversed(range(len(a))):
-        res[j] = pos*res[j]
+        left[j] = pos*left[j]
         pos = pos*a[j]
-    return res
+
+    return left
 
 
 nums = [1, 2, 3, 4]
