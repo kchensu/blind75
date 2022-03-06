@@ -5,7 +5,7 @@ def countingBits(n):
         if offset * 2 == i:
             offset = i
         dp[i] = 1 + dp[i-offset]
-    return dp
+    return dp[n]
 
 
 print(countingBits(5))

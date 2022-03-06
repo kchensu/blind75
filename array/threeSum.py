@@ -2,7 +2,6 @@ def threeSum(a):
     res = []
     a.sort()
     for i, val in enumerate(a):
-        print(a[-1])
         if i > 0 and val == a[i-1]:
             continue
 
