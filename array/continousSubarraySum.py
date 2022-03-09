@@ -7,8 +7,7 @@ def continousSubarraySum(n, k):
         r = total % k
         if r not in remainder:
             remainder[r] = i
-
-        elif i - remainder[r] == 2:
+        elif i - remainder[r] >= 2:
             return True
     return False
 

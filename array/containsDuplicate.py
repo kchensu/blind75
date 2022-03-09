@@ -5,7 +5,7 @@ def containsDuplicate(a):
         if num not in seen:
             seen.add(num)
         else:
-            True
+            return True
     return False
 
 
